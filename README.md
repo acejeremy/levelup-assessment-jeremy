@@ -36,6 +36,7 @@ dotnet run
 ```
 
 The API runs on `http://localhost:5234` and allows CORS from `http://localhost:3000`.
+Swagger UI: `http://localhost:5234/swagger`.
 
 ## Screenshots
 Homepage:
