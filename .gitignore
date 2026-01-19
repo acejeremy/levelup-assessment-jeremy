@@ -2,3 +2,7 @@
 backend/**/bin/
 backend/**/obj/
 *.csproj.user
+_LevelUpAssessment/node_modules/
+_LevelUpAssessment/build/
+_LevelUpAssessment/.env
+_LevelUpAssessment/.env.*

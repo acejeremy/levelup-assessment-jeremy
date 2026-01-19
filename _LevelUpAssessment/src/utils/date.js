@@ -1,10 +1,21 @@
+const parseLocalDate = (value) => {
+  if (!value) {
+    return null;
+  }
+  if (typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value)) {
+    const [year, month, day] = value.split("-").map(Number);
+    return new Date(year, month - 1, day);
+  }
+  const parsed = new Date(value);
+  return Number.isNaN(parsed.getTime()) ? null : parsed;
+};
 export const formatDate = (value) => {
   if (!value) {
     return "N/A";
   }
 
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) {
+  const date = parseLocalDate(value);
+  if (!date) {
     return value;
   }
 
@@ -19,8 +30,8 @@ export const formatDateInput = (value) => {
   if (!value) {
     return "";
   }
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) {
+  const date = parseLocalDate(value);
+  if (!date) {
     return value;
   }
   return date.toISOString().slice(0, 10);
@@ -30,8 +41,8 @@ export const calculateAge = (dateOfBirth) => {
   if (!dateOfBirth) {
     return "N/A";
   }
-  const birth = new Date(dateOfBirth);
-  if (Number.isNaN(birth.getTime())) {
+  const birth = parseLocalDate(dateOfBirth);
+  if (!birth) {
     return "N/A";
   }
   const today = new Date();
@@ -42,3 +53,4 @@ export const calculateAge = (dateOfBirth) => {
   }
   return age;
 };
+

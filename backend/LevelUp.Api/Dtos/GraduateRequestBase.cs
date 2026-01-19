@@ -26,6 +26,30 @@ public abstract class GraduateRequestBase : IValidatableObject
 
     public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
     {
+        if (string.IsNullOrWhiteSpace(FirstName))
+        {
+            yield return new ValidationResult(
+                "First name is required.",
+                [nameof(FirstName)]
+            );
+        }
+
+        if (string.IsNullOrWhiteSpace(LastName))
+        {
+            yield return new ValidationResult(
+                "Last name is required.",
+                [nameof(LastName)]
+            );
+        }
+
+        if (string.IsNullOrWhiteSpace(EmailAddress))
+        {
+            yield return new ValidationResult(
+                "Email address is required.",
+                [nameof(EmailAddress)]
+            );
+        }
+
         var age = AgeCalculator.CalculateAge(DateOfBirth);
         if (age < 18)
         {
@@ -36,3 +60,4 @@ public abstract class GraduateRequestBase : IValidatableObject
         }
     }
 }
+
