@@ -89,7 +89,7 @@ const UpdateGraduate = () => {
                                 name="firstName"
                                 value={formData.firstName}
                                 onChange={handleChange}
-                                className="w-full bg-transparent border-b border-white/40 focus:outline-none py-2 text-white"
+                                className="w-full bg-transparent border-b border-white/40 focus:outline-none py-2 text-white form-input"
                                 required
                             />
                         </div>
@@ -99,7 +99,7 @@ const UpdateGraduate = () => {
                                 name="phoneNumber"
                                 value={formData.phoneNumber}
                                 onChange={handleChange}
-                                className="w-full bg-transparent border-b border-white/40 focus:outline-none py-2 text-white"
+                                className="w-full bg-transparent border-b border-white/40 focus:outline-none py-2 text-white form-input"
                             />
                         </div>
                         <div>
@@ -109,7 +109,7 @@ const UpdateGraduate = () => {
                                 name="dateOfBirth"
                                 value={formData.dateOfBirth}
                                 onChange={handleChange}
-                                className="w-full bg-transparent border-b border-white/40 focus:outline-none py-2 text-white"
+                                className="w-full bg-transparent border-b border-white/40 focus:outline-none py-2 text-white form-input"
                                 required
                             />
                         </div>
@@ -121,7 +121,7 @@ const UpdateGraduate = () => {
                                 name="lastName"
                                 value={formData.lastName}
                                 onChange={handleChange}
-                                className="w-full bg-transparent border-b border-white/40 focus:outline-none py-2 text-white"
+                                className="w-full bg-transparent border-b border-white/40 focus:outline-none py-2 text-white form-input"
                                 required
                             />
                         </div>
@@ -132,7 +132,7 @@ const UpdateGraduate = () => {
                                 name="emailAddress"
                                 value={formData.emailAddress}
                                 onChange={handleChange}
-                                className="w-full bg-transparent border-b border-white/40 focus:outline-none py-2 text-white"
+                                className="w-full bg-transparent border-b border-white/40 focus:outline-none py-2 text-white form-input"
                                 required
                             />
                         </div>
