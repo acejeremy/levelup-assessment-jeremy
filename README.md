@@ -37,6 +37,19 @@ dotnet run
 
 The API runs on `http://localhost:5234` and allows CORS from `http://localhost:3000`.
 
+## Screenshots
+Homepage:
+![Homepage](_LevelUpAssessment/public/assets/screenshots/homepage.png)
+
+Graduate list:
+![Graduate list](_LevelUpAssessment/public/assets/screenshots/graduatelist.png)
+
+Delete confirmation:
+![Delete confirmation](_LevelUpAssessment/public/assets/screenshots/deleteaction.png)
+
+Create graduate:
+![Create graduate](_LevelUpAssessment/public/assets/screenshots/creategraduate.png)
+
 ## Notes
 - The API uses an in-memory database, so data resets on restart.
 - See `_LevelUpAssessment/README.md` for frontend design references.
